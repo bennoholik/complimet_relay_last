@@ -14,7 +14,9 @@ export const __getCommment = createAsyncThunk(
   "comments/getComment",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get(
+        "https://compliment-relays.herokuapp.com/comments"
+      );
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -26,12 +28,15 @@ export const __postComment = createAsyncThunk(
   "comments/postComment",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.post("http://localhost:3001/comments", {
-        id: initialID++,
-        postId: payload.postId,
-        commentContent: payload.commentContent,
-        fromWho: payload.fromWho,
-      });
+      const data = await axios.post(
+        "https://compliment-relays.herokuapp.com/comments",
+        {
+          id: initialID++,
+          postId: payload.postId,
+          commentContent: payload.commentContent,
+          fromWho: payload.fromWho,
+        }
+      );
 
       return thunkAPI.fulfillWithValue(data.data);
     } catch (error) {
@@ -45,7 +50,7 @@ export const __deleteComment = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const data = await axios.delete(
-        `http://localhost:3001/comments/${payload}`
+        `https://compliment-relays.herokuapp.com/comments/${payload}`
       );
       return thunkAPI.fulfillWithValue(payload);
     } catch (error) {
@@ -60,7 +65,7 @@ export const __editComment = createAsyncThunk(
     try {
       console.log(payload.id);
       const data = await axios.patch(
-        `http://localhost:3001/comments/${payload.id}`,
+        `https://compliment-relays.herokuapp.com/comments/${payload.id}`,
         { commentContent: payload.cmEditContent }
       );
       return thunkAPI.fulfillWithValue(payload);
