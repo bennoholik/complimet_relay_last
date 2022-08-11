@@ -1,0 +1,47 @@
+{
+  "comps": [
+    {
+      "id": 1,
+      "content": "안녕하세요",
+      "toWho": "안녕"
+    }
+  ],
+  "comments": [
+    {
+      "id": 3,
+      "postId": 2,
+      "commentContent": "1",
+      "fromWho": "1"
+    },
+    {
+      "id": 6,
+      "postId": 4,
+      "commentContent": "qwer",
+      "fromWho": "123"
+    },
+    {
+      "id": 7,
+      "postId": 4,
+      "commentContent": "23423",
+      "fromWho": "234234"
+    },
+    {
+      "id": 8,
+      "postId": 4,
+      "commentContent": "ㅁㄴㅇㄹ",
+      "fromWho": ""
+    },
+    {
+      "id": 4,
+      "postId": 4,
+      "commentContent": "234",
+      "fromWho": "23"
+    },
+    {
+      "id": 9,
+      "postId": 1,
+      "commentContent": "ㅈㄷㄱㅈㄷ",
+      "fromWho": "ㅇㅀㄱ"
+    }
+  ]
+}
